@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS posts (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    text TEXT NOT NULL,
+    rate FLOAT NOT NULL,
+    author_id INTEGER NOT NULL
+);

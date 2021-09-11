@@ -1,0 +1,1 @@
+pub const POST_MS : &str = "http://localhost:8082";

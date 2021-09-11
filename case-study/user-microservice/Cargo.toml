@@ -1,0 +1,29 @@
+[package]
+name = "user-microservice"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-cors = "0.5.4"
+actix-web = "3.3.2"
+bcrypt = "0.10.1"
+chrono = "0.4.19"
+derive_more = "0.99.16"
+diesel = { version = "1.4.7", features = ["postgres", "r2d2"] }
+diesel_codegen = "0.16.1"
+dotenv = "0.15.0"
+env = "0.0.0"
+env_logger = "0.9.0"
+jsonwebtoken = "7.2.0"
+lazy_static = "1.4.0"
+log = "0.4.14"
+r2d2 = "0.8.9"
+r2d2-diesel = "1.0.0"
+serde = "1.0.127"
+serde_derive = "1.0.127"
+validator = { version = "0.12", features = ["derive"] }
+log-mdc = "0.1.0"
+log4rs = "1.0.0"
+actix-rt = "2.2.0"
