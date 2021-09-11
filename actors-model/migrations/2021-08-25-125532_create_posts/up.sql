@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS posts (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    description TEXT NOT NULL,
+    published BOOLEAN NOT NULL DEFAULT 'f'
+);
