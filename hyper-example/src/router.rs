@@ -102,15 +102,3 @@ impl IntoResponse for Response {
         self
     }
 }
-
-impl IntoResponse for &'static str {
-    fn into_response(self) -> Response {
-        Response::new(self.into())
-    }
-}
-
-impl IntoResponse for String {
-    fn into_response(self) -> Response {
-        Response::new(self.into())
-    }
-}
