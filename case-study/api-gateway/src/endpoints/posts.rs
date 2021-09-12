@@ -90,7 +90,6 @@ pub async fn get_by_id(id: Path<i32>) -> HttpResponse {
 }
 
 // DELETE api/posts/{id}
-#[has_any_role("ADMIN")]
 pub async fn delete(id: Path<i32>, req: HttpRequest) -> HttpResponse {
     let client = awc::Client::new();
     let url = format!("{}{}{}", &constants::POST_MS, "/api/posts/", id.into_inner());

@@ -40,7 +40,6 @@ export default new Vuex.Store({
         },
 
         setGroceries(state, post) {
-            console.log("Nista");
             console.log(state);
             console.log(post);
         },
@@ -100,7 +99,6 @@ export default new Vuex.Store({
         },
 
         ratePost({ commit }, post) {
-            console.log(post.currentRating);
             return new Promise((resolve, reject) => {
                 axios({ url: 'http://localhost:8080/api/rates', data: { value: post.currentRating, post_id: post.id }, method: 'POST' })
                     .then(resp => {
@@ -170,7 +168,6 @@ export default new Vuex.Store({
                 axios({ url: 'http://localhost:8080/api/auth/login', data: user, method: 'POST' })
                     .then(resp => {
                         const token = resp.data.token;
-                        console.log(token)
                         localStorage.setItem('token', token);
                         axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
                         commit('auth_success_token', token);
